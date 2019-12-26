@@ -5,7 +5,9 @@ pipeline {
 
 
         stage ('checkout:git') {
-            git branch: "master", url: "https://github.com/vanessafso/simple-java-maven-app.git"
+            steps{
+                echo "Checkout git"
+            }
         }
 
         stage('Build:Maven') { 
