@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build:Maven') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                sh '/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/MAVEN/bin/mvn -B -DskipTests clean package' 
             }
         }
 
