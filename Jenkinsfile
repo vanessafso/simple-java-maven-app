@@ -4,11 +4,11 @@ pipeline {
     stages{
 
 
-        stage ("checkout:git") {
+        stage ('checkout:git') {
             git branch: "master", url: "https://github.com/vanessafso/simple-java-maven-app.git"
         }
 
-        stage("Build:Maven") { 
+        stage('Build:Maven') { 
             steps {
                 sh 'mvn -B -DskipTests clean package' 
             }
