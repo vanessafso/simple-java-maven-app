@@ -16,7 +16,7 @@ pipeline {
             }
         }
 
-        stage("Analise:Sonar")
+        stage("Analise:Sonar") {
             steps {
                 sh '$MVN sonar:sonar \
                 -Dsonar.projectKey=BecaDevOps:master \
